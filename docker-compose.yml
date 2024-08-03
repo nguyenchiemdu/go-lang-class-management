@@ -1,0 +1,10 @@
+version: '3'
+services:
+  arangodb:
+    image: arangodb
+    environment:
+      - ARANGO_ROOT_PASSWORD=${DB_PASSWORD}
+    env_file:
+      - .env
+    ports:
+      - ${DB_PORT}:8529
